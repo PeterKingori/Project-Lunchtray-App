@@ -26,7 +26,6 @@ import com.example.lunchtray.databinding.FragmentStartOrderBinding
  * [StartOrderFragment] allows people to click the start button to start an order.
  */
 class StartOrderFragment : Fragment() {
-
     // Binding object instance corresponding to the fragment_start_order.xml layout
     // This property is non-null between the onCreateView() and onDestroyView() lifecycle callbacks,
     // when the view hierarchy is attached to the fragment.
@@ -36,11 +35,7 @@ class StartOrderFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentStartOrderBinding.inflate(inflater, container, false)
         val root: View = binding.root
         // Navigate to entree menu

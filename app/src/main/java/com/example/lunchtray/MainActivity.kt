@@ -21,7 +21,6 @@ import androidx.navigation.NavController
 import com.example.lunchtray.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-
     // Binding object instance corresponding to the activity_main.xml layout
     // when the view hierarchy is attached to the fragment.
     private lateinit var binding: ActivityMainBinding
