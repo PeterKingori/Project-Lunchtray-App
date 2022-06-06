@@ -56,8 +56,14 @@ class CheckoutFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.apply {
+            // Specify the fragment as the lifecycle owner
             lifecycleOwner = viewLifecycleOwner
-            // TODO: initialize the OrderViewModel and CheckoutFragment variables
+
+            // Assign the view model to a property in the binding class
+            viewModel = sharedViewModel
+
+            // Assign the fragment
+            checkoutFragment = this@CheckoutFragment
         }
     }
 

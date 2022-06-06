@@ -44,17 +44,21 @@ class AccompanimentMenuFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentAccompanimentMenuBinding.inflate(inflater, container, false)
-        val root = binding.root
 
-        return root
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.apply {
+            // Specify the fragment as the lifecycle owner
             lifecycleOwner = viewLifecycleOwner
+
+            // Assign the view model to a property in the binding class
             viewModel = sharedViewModel
-            // TODO: initialize the AccompanimentMenuFragment variables
+
+            // Assign the fragment
+            accompanimentMenuFragment = this@AccompanimentMenuFragment
         }
     }
 
