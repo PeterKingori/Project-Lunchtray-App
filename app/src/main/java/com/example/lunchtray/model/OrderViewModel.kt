@@ -70,7 +70,7 @@ class OrderViewModel : ViewModel() {
     fun setEntree(entree: String) {
         // If _entree.value is not null, set the previous entree price to the current
         //  entree price.
-        if (_entree.value != null) previousEntreePrice = _entree.value!!.price
+        if (_entree.value != null) previousEntreePrice = menuItems[entree]?.price!!
 
         // If _subtotal.value is not null subtract the previous entree price from the current
         //  subtotal value. This ensures that we only charge for the currently selected entree.
@@ -90,7 +90,7 @@ class OrderViewModel : ViewModel() {
      */
     fun setSide(side: String) {
         // If _side.value is not null, set the previous side price to the current side price.
-        if (_side.value != null) previousSidePrice = _side.value!!.price
+        if (_side.value != null) previousSidePrice = menuItems[side]?.price!!
 
         // If _subtotal.value is not null subtract the previous side price from the current
         //  subtotal value. This ensures that we only charge for the currently selected side.
@@ -111,7 +111,7 @@ class OrderViewModel : ViewModel() {
     fun setAccompaniment(accompaniment: String) {
         // If _accompaniment.value is not null, set the previous accompaniment price to the
         //  current accompaniment price.
-        if (_accompaniment.value != null) previousAccompanimentPrice = _accompaniment.value!!.price
+        if (_accompaniment.value != null) previousAccompanimentPrice = menuItems[accompaniment]?.price!!
 
         // If _subtotal.value is not null subtract the previous accompaniment price from
         //  the current subtotal value. This ensures that we only charge for the currently selected
